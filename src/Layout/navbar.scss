@@ -8,11 +8,21 @@
     color: white; //Just for ilustration
 }
 
-
 .side-navbar{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.side-navbar .navbar-strategy_items{
+    width: 100%;
+    height: 75%;
+}
+
+.strategy_items{
+    display: flex;
+    flex-direction: column;
+    
 }
