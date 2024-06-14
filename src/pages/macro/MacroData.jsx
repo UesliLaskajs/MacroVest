@@ -1,9 +1,9 @@
-import Navbar from "../../Layout/Navbar"
 function MacroData() {
   return (
-    <div>
-        <Navbar/>
-    </div>
+    <section>
+       
+        
+    </section>
   )
 }
 
