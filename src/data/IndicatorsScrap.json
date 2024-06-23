@@ -1,0 +1,211 @@
+{
+    "rows": [
+        {
+            "Indicator": "Currency",
+            "Last": "106",
+            "Previous": "106",
+            "Highest": "165",
+            "Lowest": "70.7",
+            "Unit": "",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Stock Market",
+            "Last": "5465",
+            "Previous": "5473",
+            "Highest": "5506",
+            "Lowest": "4.4",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "GDP Growth Rate",
+            "Last": "1.3",
+            "Previous": "3.4",
+            "Highest": "34.8",
+            "Lowest": "-28",
+            "Unit": "percent",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "GDP Annual Growth Rate",
+            "Last": "2.9",
+            "Previous": "3.1",
+            "Highest": "13.4",
+            "Lowest": "-7.5",
+            "Unit": "percent",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "Unemployment Rate",
+            "Last": "4",
+            "Previous": "3.9",
+            "Highest": "14.9",
+            "Lowest": "2.5",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Non Farm Payrolls",
+            "Last": "272",
+            "Previous": "165",
+            "Highest": "4615",
+            "Lowest": "-20477",
+            "Unit": "Thousand",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Inflation Rate",
+            "Last": "3.3",
+            "Previous": "3.4",
+            "Highest": "23.7",
+            "Lowest": "-15.8",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Inflation Rate MoM",
+            "Last": "0",
+            "Previous": "0.3",
+            "Highest": "2",
+            "Lowest": "-1.8",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Interest Rate",
+            "Last": "5.5",
+            "Previous": "5.5",
+            "Highest": "20",
+            "Lowest": "0.25",
+            "Unit": "percent",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Balance of Trade",
+            "Last": "-74.56",
+            "Previous": "-68.58",
+            "Highest": "1.95",
+            "Lowest": "-102",
+            "Unit": "USD Billion",
+            "Date": "Apr/24"
+        },
+        {
+            "Indicator": "Current Account",
+            "Last": "-238",
+            "Previous": "-222",
+            "Highest": "9.96",
+            "Lowest": "-292",
+            "Unit": "USD Billion",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "Current Account to GDP",
+            "Last": "-3",
+            "Previous": "-3.8",
+            "Highest": "0.2",
+            "Lowest": "-6",
+            "Unit": "percent of GDP",
+            "Date": "Dec/23"
+        },
+        {
+            "Indicator": "Government Debt to GDP",
+            "Last": "122",
+            "Previous": "122",
+            "Highest": "126",
+            "Lowest": "31.8",
+            "Unit": "percent of GDP",
+            "Date": "Dec/23"
+        },
+        {
+            "Indicator": "Government Budget",
+            "Last": "-6.3",
+            "Previous": "-5.4",
+            "Highest": "4.5",
+            "Lowest": "-14.7",
+            "Unit": "percent of GDP",
+            "Date": "Dec/23"
+        },
+        {
+            "Indicator": "Business Confidence",
+            "Last": "48.7",
+            "Previous": "49.2",
+            "Highest": "77.5",
+            "Lowest": "29.4",
+            "Unit": "points",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Manufacturing PMI",
+            "Last": "51.7",
+            "Previous": "51.3",
+            "Highest": "63.4",
+            "Lowest": "36.1",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Non Manufacturing PMI",
+            "Last": "53.8",
+            "Previous": "49.4",
+            "Highest": "67.6",
+            "Lowest": "37.8",
+            "Unit": "points",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Services PMI",
+            "Last": "55.1",
+            "Previous": "54.8",
+            "Highest": "70.4",
+            "Lowest": "26.7",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Consumer Confidence",
+            "Last": "65.6",
+            "Previous": "69.1",
+            "Highest": "111",
+            "Lowest": "50",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Retail Sales MoM",
+            "Last": "0.1",
+            "Previous": "-0.2",
+            "Highest": "18.8",
+            "Lowest": "-14.5",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Building Permits",
+            "Last": "1386",
+            "Previous": "1440",
+            "Highest": "2419",
+            "Lowest": "513",
+            "Unit": "Thousand",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Corporate Tax Rate",
+            "Last": "21",
+            "Previous": "21",
+            "Highest": "52.8",
+            "Lowest": "1",
+            "Unit": "percent",
+            "Date": "Dec/24"
+        },
+        {
+            "Indicator": "Personal Income Tax Rate",
+            "Last": "37",
+            "Previous": "37",
+            "Highest": "39.6",
+            "Lowest": "35",
+            "Unit": "percent",
+            "Date": "Dec/23"
+        }
+    ]
+}
