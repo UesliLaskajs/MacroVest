@@ -1,11 +1,9 @@
+
+
 function MacroData() {
-  return (
-    <section>
-       
-      
-        
-    </section>
-  )
+  
+
+  return <section></section>;
 }
 
-export default MacroData
+export default MacroData;

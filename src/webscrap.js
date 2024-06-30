@@ -1,13 +1,33 @@
 import puppeteer from "puppeteer";
-import fs from "fs"
+import fs from "fs";
 import path from "path";
-(async function () {
+import express from "express"
+import bodyParser from "body-parser";
+import cors from "cors"
+
+const app = express();
+const PORT = 3001;
+
+app.use(cors());
+app.use(bodyParser.json());
+
+app.post('/update-pair', async (req, res) => {
+    const { selectedPair } = req.body;
+    console.log(`Received selected pair: ${selectedPair}`);
+
+    const filePath = path.resolve("../src/data/data.json");
+
+    // Read existing data
+    let existingData = null;
+    if (fs.existsSync(filePath)) {
+        existingData = fs.readFileSync(filePath, "utf8");
+    }
+
     const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
-    await page.goto('https://tradingeconomics.com/united-states/indicators');
+    await page.goto(`https://tradingeconomics.com/${selectedPair}/indicators`);
 
-    const data = await page.evaluate(function () {
-
+    const newData = await page.evaluate(() => {
         const tableBody = document.querySelector(".table.table-hover tbody");
         const tableData = {};
         let rows = [];
@@ -30,20 +50,25 @@ import path from "path";
 
         tableData.rows = rows;
 
-        const jsonData = JSON.stringify(tableData, null, 4);
-
-        return jsonData;
+        return JSON.stringify(tableData, null, 4);
     });
 
-    console.log(data);
+    await browser.close();
 
-    //Define FilePath
+    // Compare new data with existing data
+    if (newData === existingData) {
+        console.log("The data has not changed. No update required.");
+    } else {
+        console.log("The data has changed. Updating the file...");
 
-    const filePath = path.resolve("./data/IndicatorsScrap.json")
-    if (fs.existsSync(filePath)) {
-        fs.unlinkSync(filePath)
+        // Update the JSON file with new data
+        fs.writeFileSync(filePath, newData);
+        console.log("Data updated successfully.");
     }
 
-    fs.writeFileSync(filePath, data)
-    await browser.close();
-})();
+    res.sendStatus(200);
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
