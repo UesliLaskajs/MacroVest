@@ -1,184 +1,357 @@
 {
-    "rows": [
+    "new-zealand": [
         {
             "Indicator": "Currency",
-            "Last": "1.07",
-            "Previous": "1.07",
-            "Highest": "1.87",
-            "Lowest": "0.64",
+            "Last": "0.61",
+            "Previous": "0.61",
+            "Highest": "1.49",
+            "Lowest": "0.39",
             "Unit": "",
-            "Date": "Jun/24"
+            "Date": "Jul/24"
         },
         {
             "Indicator": "Stock Market",
-            "Last": "4893",
-            "Previous": "4903",
-            "Highest": "5522",
-            "Lowest": "616",
+            "Last": "11789",
+            "Previous": "11717",
+            "Highest": "13644",
+            "Lowest": "1665",
             "Unit": "points",
-            "Date": "Jun/24"
+            "Date": "Jul/24"
         },
         {
             "Indicator": "GDP Growth Rate",
-            "Last": "0.3",
+            "Last": "0.2",
             "Previous": "-0.1",
-            "Highest": "12.1",
-            "Lowest": "-11.3",
+            "Highest": "14.1",
+            "Lowest": "-10.1",
             "Unit": "percent",
             "Date": "Mar/24"
         },
         {
             "Indicator": "GDP Annual Growth Rate",
-            "Last": "0.4",
-            "Previous": "0.2",
-            "Highest": "14.9",
-            "Lowest": "-14.1",
+            "Last": "0.3",
+            "Previous": "-0.2",
+            "Highest": "17.8",
+            "Lowest": "-9.8",
             "Unit": "percent",
             "Date": "Mar/24"
         },
         {
             "Indicator": "Unemployment Rate",
-            "Last": "6.4",
-            "Previous": "6.5",
-            "Highest": "12.2",
-            "Lowest": "6.4",
+            "Last": "4.3",
+            "Previous": "4",
+            "Highest": "11.2",
+            "Lowest": "3.2",
             "Unit": "percent",
-            "Date": "Apr/24"
+            "Date": "Mar/24"
         },
         {
             "Indicator": "Inflation Rate",
-            "Last": "2.6",
-            "Previous": "2.4",
-            "Highest": "10.6",
-            "Lowest": "-0.6",
+            "Last": "4",
+            "Previous": "4.7",
+            "Highest": "44",
+            "Lowest": "-15.3",
             "Unit": "percent",
-            "Date": "May/24"
+            "Date": "Mar/24"
         },
         {
             "Indicator": "Inflation Rate MoM",
-            "Last": "0.2",
-            "Previous": "0.6",
-            "Highest": "2.4",
-            "Lowest": "-1.5",
+            "Last": "0.6",
+            "Previous": "0.5",
+            "Highest": "8.9",
+            "Lowest": "-4.1",
+            "Unit": "percent",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "Interest Rate",
+            "Last": "5.5",
+            "Previous": "5.5",
+            "Highest": "67.32",
+            "Lowest": "0.25",
             "Unit": "percent",
             "Date": "May/24"
         },
         {
-            "Indicator": "Interest Rate",
-            "Last": "4.25",
-            "Previous": "4.5",
-            "Highest": "4.75",
-            "Lowest": "0",
-            "Unit": "percent",
-            "Date": "Jun/24"
-        },
-        {
             "Indicator": "Balance of Trade",
-            "Last": "15040",
-            "Previous": "23703",
-            "Highest": "29946",
-            "Lowest": "-55033",
-            "Unit": "EUR Million",
-            "Date": "Apr/24"
+            "Last": "204",
+            "Previous": "-3",
+            "Highest": "1374",
+            "Lowest": "-2634",
+            "Unit": "NZD Million",
+            "Date": "May/24"
         },
         {
             "Indicator": "Current Account",
-            "Last": "34.4",
-            "Previous": "44.5",
-            "Highest": "50.04",
-            "Lowest": "-33.54",
-            "Unit": "EUR Billion",
-            "Date": "Apr/24"
+            "Last": "-4360",
+            "Previous": "-7975",
+            "Highest": "2048",
+            "Lowest": "-11089",
+            "Unit": "NZD Million",
+            "Date": "Mar/24"
         },
         {
             "Indicator": "Current Account to GDP",
-            "Last": "1.9",
-            "Previous": "-0.5",
-            "Highest": "3.1",
-            "Lowest": "-1.8",
+            "Last": "-6.9",
+            "Previous": "-8.8",
+            "Highest": "-0.1",
+            "Lowest": "-8.9",
             "Unit": "percent of GDP",
             "Date": "Dec/23"
         },
         {
             "Indicator": "Government Debt to GDP",
-            "Last": "88.6",
-            "Previous": "90.8",
-            "Highest": "97.2",
-            "Lowest": "66.1",
+            "Last": "35.9",
+            "Previous": "29.8",
+            "Highest": "54.8",
+            "Lowest": "4.4",
             "Unit": "percent of GDP",
-            "Date": "Dec/23"
+            "Date": "Dec/22"
         },
         {
             "Indicator": "Government Budget",
-            "Last": "-3.6",
-            "Previous": "-3.7",
-            "Highest": "-0.4",
-            "Lowest": "-7.3",
+            "Last": "-2.4",
+            "Previous": "-2.7",
+            "Highest": "4.5",
+            "Lowest": "-8.9",
             "Unit": "percent of GDP",
             "Date": "Dec/23"
         },
         {
             "Indicator": "Business Confidence",
-            "Last": "-0.39",
-            "Previous": "-0.51",
-            "Highest": "1.85",
-            "Lowest": "-3.31",
+            "Last": "6.1",
+            "Previous": "11.2",
+            "Highest": "80.9",
+            "Lowest": "-76.4",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Manufacturing PMI",
+            "Last": "47.2",
+            "Previous": "48.9",
+            "Highest": "64.4",
+            "Lowest": "26",
             "Unit": "points",
             "Date": "May/24"
         },
         {
-            "Indicator": "Manufacturing PMI",
-            "Last": "45.6",
-            "Previous": "47.3",
-            "Highest": "63.4",
-            "Lowest": "33.4",
-            "Unit": "points",
-            "Date": "Jun/24"
-        },
-        {
-            "Indicator": "Services PMI",
-            "Last": "52.6",
-            "Previous": "53.2",
-            "Highest": "59.8",
-            "Lowest": "12",
-            "Unit": "points",
-            "Date": "Jun/24"
-        },
-        {
             "Indicator": "Consumer Confidence",
-            "Last": "-14",
-            "Previous": "-14.3",
-            "Highest": "-1.8",
-            "Lowest": "-28.6",
+            "Last": "82.2",
+            "Previous": "93.2",
+            "Highest": "131",
+            "Lowest": "75.6",
             "Unit": "points",
             "Date": "Jun/24"
         },
         {
             "Indicator": "Retail Sales MoM",
-            "Last": "-0.5",
-            "Previous": "0.7",
-            "Highest": "19.4",
-            "Lowest": "-11.4",
+            "Last": "0.5",
+            "Previous": "-1.9",
+            "Highest": "27.6",
+            "Lowest": "-15.4",
             "Unit": "percent",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "Building Permits",
+            "Last": "2877",
+            "Previous": "2934",
+            "Highest": "4613",
+            "Lowest": "993",
+            "Unit": "Units",
             "Date": "Apr/24"
         },
         {
             "Indicator": "Corporate Tax Rate",
-            "Last": "23",
-            "Previous": "23",
-            "Highest": "36.8",
-            "Lowest": "23",
+            "Last": "28",
+            "Previous": "28",
+            "Highest": "48",
+            "Lowest": "28",
+            "Unit": "percent",
+            "Date": "Dec/24"
+        },
+        {
+            "Indicator": "Personal Income Tax Rate",
+            "Last": "39",
+            "Previous": "39",
+            "Highest": "39",
+            "Lowest": "33",
+            "Unit": "percent",
+            "Date": "Dec/24"
+        }
+    ],
+    "switzerland": [
+        {
+            "Indicator": "Currency",
+            "Last": "0.9",
+            "Previous": "0.9",
+            "Highest": "4.32",
+            "Lowest": "0.71",
+            "Unit": "",
+            "Date": "Jul/24"
+        },
+        {
+            "Indicator": "Stock Market",
+            "Last": "12044",
+            "Previous": "11994",
+            "Highest": "12997",
+            "Lowest": "1288",
+            "Unit": "points",
+            "Date": "Jul/24"
+        },
+        {
+            "Indicator": "GDP Growth Rate",
+            "Last": "0.5",
+            "Previous": "0.3",
+            "Highest": "6.9",
+            "Lowest": "-6.6",
+            "Unit": "percent",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "GDP Annual Growth Rate",
+            "Last": "0.6",
+            "Previous": "0.5",
+            "Highest": "10.6",
+            "Lowest": "-7",
+            "Unit": "percent",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "Unemployment Rate",
+            "Last": "2.3",
+            "Previous": "2.3",
+            "Highest": "5.7",
+            "Lowest": "1.5",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Inflation Rate",
+            "Last": "1.4",
+            "Previous": "1.4",
+            "Highest": "11.92",
+            "Lowest": "-1.4",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Inflation Rate MoM",
+            "Last": "0.3",
+            "Previous": "0.3",
+            "Highest": "2.1",
+            "Lowest": "-1",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Interest Rate",
+            "Last": "1.25",
+            "Previous": "1.5",
+            "Highest": "3.5",
+            "Lowest": "-0.75",
+            "Unit": "percent",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Balance of Trade",
+            "Last": "4128",
+            "Previous": "3767",
+            "Highest": "5643",
+            "Lowest": "-1453",
+            "Unit": "CHF Million",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Current Account",
+            "Last": "16102",
+            "Previous": "13780",
+            "Highest": "26527",
+            "Lowest": "-18310",
+            "Unit": "CHF Million",
+            "Date": "Mar/24"
+        },
+        {
+            "Indicator": "Current Account to GDP",
+            "Last": "7.6",
+            "Previous": "9.9",
+            "Highest": "14.8",
+            "Lowest": "-0.6",
+            "Unit": "percent of GDP",
+            "Date": "Dec/23"
+        },
+        {
+            "Indicator": "Government Debt to GDP",
+            "Last": "38.3",
+            "Previous": "37.7",
+            "Highest": "57.8",
+            "Lowest": "25.1",
+            "Unit": "percent of GDP",
+            "Date": "Dec/23"
+        },
+        {
+            "Indicator": "Government Budget",
+            "Last": "0.5",
+            "Previous": "1.2",
+            "Highest": "1.9",
+            "Lowest": "-3.1",
+            "Unit": "percent of GDP",
+            "Date": "Dec/23"
+        },
+        {
+            "Indicator": "Business Confidence",
+            "Last": "103",
+            "Previous": "102",
+            "Highest": "128",
+            "Lowest": "41.8",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Manufacturing PMI",
+            "Last": "43.9",
+            "Previous": "46.4",
+            "Highest": "70",
+            "Lowest": "33",
+            "Unit": "points",
+            "Date": "Jun/24"
+        },
+        {
+            "Indicator": "Consumer Confidence",
+            "Last": "-38",
+            "Previous": "-38.1",
+            "Highest": "20",
+            "Lowest": "-52.5",
+            "Unit": "points",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Retail Sales MoM",
+            "Last": "0.2",
+            "Previous": "0.1",
+            "Highest": "31.1",
+            "Lowest": "-12.8",
+            "Unit": "percent",
+            "Date": "May/24"
+        },
+        {
+            "Indicator": "Corporate Tax Rate",
+            "Last": "14.6",
+            "Previous": "14.68",
+            "Highest": "25",
+            "Lowest": "14.6",
             "Unit": "percent",
             "Date": "Dec/23"
         },
         {
             "Indicator": "Personal Income Tax Rate",
-            "Last": "42.9",
-            "Previous": "43",
-            "Highest": "49",
-            "Lowest": "38.8",
+            "Last": "40",
+            "Previous": "40",
+            "Highest": "40.4",
+            "Lowest": "40",
             "Unit": "percent",
-            "Date": "Dec/22"
+            "Date": "Dec/23"
         }
     ]
 }

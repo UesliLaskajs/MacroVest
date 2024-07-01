@@ -37,7 +37,7 @@ function Navbar() {
     []
   );
 
-  const [selectedPair, setSelectedPair] = useState(currencyPairs[1].name);
+  const [selectedPair, setSelectedPair] = useState(currencyPairs[0].name);
 
   const selectHandler = async (e) => {
     const newPair = e.target.value;
