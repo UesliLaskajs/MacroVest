@@ -1,36 +1,25 @@
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
+import FormPost from "./FormPost";
 function Testing() {
-  const [pointer, setPointer] = useState({ x: 0, y: 0 });
-
-  const eventPointerHandler = (e) => {
-    setPointer({ x: e.clientX, y: e.clientY }); 
-  };
-
-
-  useEffect(() => {
-    window.addEventListener("pointermove", eventPointerHandler);
-
-    return () => {
-      window.removeEventListener("pointermove", eventPointerHandler);
-    };
-  }, []);
+  const [isDark, setIsDark] = useState(false);
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        backgroundColor: "pink",
-        borderRadius: "50%",
-        opacity: 0.6,
-        transform: `translate(${pointer.x}px, ${pointer.y}px)`,
-        pointerEvents: "none",
-        left: -20,
-        top: -20,
-        width: 40,
-        height: 40,
-      }}
-    />
+    <div>
+      <label htmlFor="checkBox">
+        {isDark ? "Dark" : "Light"} Mode
+        <input
+          type="checkbox"
+          onChange={(e) => {
+            setIsDark(e.target.checked);
+          }}
+        />
+      </label>
+      <FormPost
+        theme={isDark ? "dark" : "light"}
+        productId={777}
+        reference={"iceCream"}
+      />
+    </div>
   );
 }
 

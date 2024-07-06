@@ -73,8 +73,8 @@ app.post('/update-pair', async (req, res) => {
         await browser.close();
 
         const newData = {
-            [pair1]: data1,
-            [pair2]: data2
+            [pair1.toUpperCase()]: data1,
+            [pair2.toUpperCase()]: data2
         };
 
         const newJsonData = JSON.stringify(newData, null, 4);
