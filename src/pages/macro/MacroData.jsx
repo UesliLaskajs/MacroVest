@@ -18,9 +18,8 @@ function MacroData() {
 
 
   return (
-    <section>
+    <section style={{display:"flex"}}>
       <GridMacroData data={data} index={0} />
-      <hr />
       <GridMacroData data={data} index={1} />
     </section>
   );
