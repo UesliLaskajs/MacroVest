@@ -11,9 +11,9 @@
         },
         {
             "Indicator": "Stock Market",
-            "Last": "7795",
-            "Previous": "7822",
-            "Highest": "7920",
+            "Last": "8026",
+            "Previous": "7999",
+            "Highest": "8097",
             "Lowest": "1358",
             "Unit": "points",
             "Date": "Jul/24"
@@ -101,12 +101,12 @@
         },
         {
             "Indicator": "Government Debt to GDP",
-            "Last": "22.3",
-            "Previous": "28.6",
-            "Highest": "28.6",
+            "Last": "43.8",
+            "Previous": "42.8",
+            "Highest": "43.8",
             "Lowest": "-3.4",
             "Unit": "percent of GDP",
-            "Date": "Dec/22"
+            "Date": "Dec/24"
         },
         {
             "Indicator": "Government Budget",
@@ -119,12 +119,12 @@
         },
         {
             "Indicator": "Business Confidence",
-            "Last": "-3",
-            "Previous": "1",
+            "Last": "4",
+            "Previous": "-2",
             "Highest": "23",
             "Lowest": "-68",
             "Unit": "points",
-            "Date": "May/24"
+            "Date": "Jun/24"
         },
         {
             "Indicator": "Manufacturing PMI",
@@ -146,12 +146,12 @@
         },
         {
             "Indicator": "Consumer Confidence",
-            "Last": "83.6",
-            "Previous": "82.2",
+            "Last": "82.7",
+            "Previous": "83.6",
             "Highest": "124",
             "Lowest": "64.6",
             "Unit": "points",
-            "Date": "Jun/24"
+            "Date": "Jul/24"
         },
         {
             "Indicator": "Retail Sales MoM",
@@ -193,8 +193,8 @@
     "UNITED-STATES": [
         {
             "Indicator": "Currency",
-            "Last": "105",
-            "Previous": "105",
+            "Last": "104",
+            "Previous": "104",
             "Highest": "165",
             "Lowest": "70.7",
             "Unit": "",
@@ -202,9 +202,9 @@
         },
         {
             "Indicator": "Stock Market",
-            "Last": "5565",
-            "Previous": "5567",
-            "Highest": "5582",
+            "Last": "5602",
+            "Previous": "5667",
+            "Highest": "5672",
             "Lowest": "4.4",
             "Unit": "points",
             "Date": "Jul/24"
@@ -247,21 +247,21 @@
         },
         {
             "Indicator": "Inflation Rate",
-            "Last": "3.3",
-            "Previous": "3.4",
+            "Last": "3",
+            "Previous": "3.3",
             "Highest": "23.7",
             "Lowest": "-15.8",
             "Unit": "percent",
-            "Date": "May/24"
+            "Date": "Jun/24"
         },
         {
             "Indicator": "Inflation Rate MoM",
-            "Last": "0",
-            "Previous": "0.3",
+            "Last": "-0.1",
+            "Previous": "0",
             "Highest": "2",
             "Lowest": "-1.8",
             "Unit": "percent",
-            "Date": "May/24"
+            "Date": "Jun/24"
         },
         {
             "Indicator": "Interest Rate",
@@ -355,30 +355,30 @@
         },
         {
             "Indicator": "Consumer Confidence",
-            "Last": "68.2",
-            "Previous": "69.1",
+            "Last": "66",
+            "Previous": "68.2",
             "Highest": "111",
             "Lowest": "50",
             "Unit": "points",
-            "Date": "Jun/24"
+            "Date": "Jul/24"
         },
         {
             "Indicator": "Retail Sales MoM",
-            "Last": "0.1",
-            "Previous": "-0.2",
+            "Last": "0",
+            "Previous": "0.3",
             "Highest": "18.8",
             "Lowest": "-14.5",
             "Unit": "percent",
-            "Date": "May/24"
+            "Date": "Jun/24"
         },
         {
             "Indicator": "Building Permits",
-            "Last": "1399",
-            "Previous": "1440",
+            "Last": "1446",
+            "Previous": "1399",
             "Highest": "2419",
             "Lowest": "513",
             "Unit": "Thousand",
-            "Date": "May/24"
+            "Date": "Jun/24"
         },
         {
             "Indicator": "Corporate Tax Rate",

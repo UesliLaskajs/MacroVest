@@ -15,12 +15,12 @@ function MacroData() {
       });
   }, []);
 
-
+  console.log(data);
 
   return (
-    <section style={{display:"flex"}}>
-      <GridMacroData data={data} index={0} />
-      <GridMacroData data={data} index={1} />
+    <section style={{ display: "flex", width: "86%" }}>
+      <GridMacroData data={data} index={0} compareIndex={1} />
+      <GridMacroData data={data} index={1} compareIndex={0} />
     </section>
   );
 }
