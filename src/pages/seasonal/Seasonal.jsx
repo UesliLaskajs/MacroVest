@@ -20,6 +20,7 @@ function Seasonal() {
       });
   }, []);
 
+  console.log(Object.keys(data))
   return (
     <div style={{ width: "100%", height: "100vh" }}> {/* Full width and height */}
       <CurrencyLineChart data={data} />

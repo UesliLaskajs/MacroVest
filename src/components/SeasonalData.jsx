@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -6,59 +7,61 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
+} from 'recharts';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line react/prop-types
 function CurrencyLineChart({ data }) {
+  const startDate = new Date('2024-01-01');
+
   const filteredYears = (startYear, endYear) => {
     const filteredData = Object.keys(data).reduce((result, date) => {
       const currentDate = new Date(date);
       const year = currentDate.getFullYear();
       if (year >= startYear && year <= endYear) {
-        const monthDay = `${
-          currentDate.getMonth() + 1
-        }-${currentDate.getDate()}`;
+        const monthDay = `${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
         if (!result[monthDay]) {
           result[monthDay] = [];
         }
-        // eslint-disable-next-line react/prop-types
-        result[monthDay].push(parseFloat(data[date]["4. close"]));
+        result[monthDay].push(parseFloat(data[date]['4. close']));
       }
       return result;
     }, {});
 
-    const averagedData = Object.keys(filteredData).reduce(
-      (result, monthDay) => {
-        const averageClose =
-          filteredData[monthDay].reduce((sum, close) => sum + close, 0) /
-          filteredData[monthDay].length;
-        const [month, day] = monthDay.split("-");
-        const formattedDate = `${new Date().getFullYear()}-${month.padStart(
-          2,
-          "0"
-        )}-${day.padStart(2, "0")}`;
-        result[formattedDate] = averageClose.toFixed(4); 
-        return result;
-      },
-      {}
-    );
+    const averagedData = Object.keys(filteredData).reduce((result, monthDay) => {
+      const averageClose =
+        filteredData[monthDay].reduce((sum, close) => sum + close, 0) /
+        filteredData[monthDay].length;
+      const [month, day] = monthDay.split('-');
+      const formattedDate = `${new Date().getFullYear()}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+      result.push({ date: formattedDate, close: averageClose.toFixed(4) });
+      return result;
+    }, []);
 
-    return averagedData;
+    return averagedData.filter(entry => new Date(entry.date) >= startDate);
   };
 
-  const averagedData3Years = filteredYears(2022, 2024);
-  const averagedData5Years = filteredYears(2020, 2024);
-  const averagedData10Years = filteredYears(2016, 2024);
+  const averagedData3Years = filteredYears(2021, 2023);
+  const averagedData5Years = filteredYears(2018, 2020);
+  const averagedData10Years = filteredYears(2016, 2019);
 
-  console.log(averagedData3Years);
-  console.log(averagedData5Years);
-  console.log(averagedData10Years);
+  // Ensure combined data is aligned by date
+  const combinedData = averagedData3Years.map((entry) => {
+    const date = entry.date;
+    return {
+      date,
+      '3YearAvg': entry.close,
+      '5YearAvg': averagedData5Years.find(e => e.date === date)?.close || null,
+      '10YearAvg': averagedData10Years.find(e => e.date === date)?.close || null,
+    };
+  });
+
+  console.log(combinedData);
 
   return (
     <LineChart
       width={1300}
-      height={400}
-      data={data}
+      height={600} // Increased height for better visibility
+      data={combinedData}
       margin={{
         top: 5,
         right: 30,
@@ -66,23 +69,20 @@ function CurrencyLineChart({ data }) {
         bottom: 5,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis yAxisId="left" />
-      <YAxis yAxisId="right" orientation="right" />
+      <CartesianGrid strokeDasharray="1 1" />
+      <XAxis dataKey="date" />
+      <YAxis domain={[1.0, 1.2]} /> {/* Set Y-axis range */}
       <Tooltip />
       <Legend />
-      <Line
-        yAxisId="left"
-        type="monotone"
-        dataKey="pv"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
-      />
-      <Line yAxisId="right" type="monotone" dataKey="uv" stroke="red" />
-      <Line yAxisId="right" type="monotone" dataKey="amt" stroke="#82ca9d" />
+      <Line type="monotone" dataKey="3YearAvg" stroke="#8884d8" activeDot={{ r: 6 }} />
+      <Line type="monotone" dataKey="5YearAvg" stroke="red" />
+      <Line type="monotone" dataKey="10YearAvg" stroke="#82ca9d" />
     </LineChart>
   );
 }
+
+CurrencyLineChart.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default CurrencyLineChart;
