@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import {
   LineChart,
   Line,
@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from 'recharts';
 import PropTypes from 'prop-types';
 
@@ -55,29 +56,42 @@ function CurrencyLineChart({ data }) {
     };
   });
 
-  console.log(combinedData);
+  // Custom Tooltip
+  const CustomTooltip = ({ payload, label }) => {
+    if (payload && payload.length) {
+      return (
+        <div className="custom-tooltip" style={{ backgroundColor: '#fff', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
+          <p className="label">{`Date: ${label}`}</p>
+          {payload.map((entry, index) => (
+            <p key={index} style={{ color: entry.stroke }}>{`${entry.name}: ${entry.value}`}</p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
-    <LineChart
-      width={1300}
-      height={600} // Increased height for better visibility
-      data={combinedData}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="1 1" />
-      <XAxis dataKey="date" />
-      <YAxis domain={[1.0, 1.2]} /> {/* Set Y-axis range */}
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="3YearAvg" stroke="#8884d8" activeDot={{ r: 6 }} />
-      <Line type="monotone" dataKey="5YearAvg" stroke="red" />
-      <Line type="monotone" dataKey="10YearAvg" stroke="#82ca9d" />
-    </LineChart>
+    <ResponsiveContainer width="100%" height={600}>
+      <LineChart
+        data={combinedData}
+        margin={{
+          top: 20,
+          right: 30,
+          left: 20,
+          bottom: 20,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+        <XAxis dataKey="date" tick={{ fontSize: 12 }} tickMargin={10} />
+        <YAxis domain={[1.0, 1.2]} tick={{ fontSize: 12 }} tickMargin={10} />
+        <Tooltip content={<CustomTooltip />} />
+        <Legend verticalAlign="top" wrapperStyle={{ paddingBottom: '10px' }} />
+        <Line type="monotone" dataKey="3YearAvg" stroke="#8884d8" strokeWidth={2} dot={{ stroke: '#8884d8', strokeWidth: 2 }} />
+        <Line type="monotone" dataKey="5YearAvg" stroke="red" strokeWidth={2} dot={{ stroke: 'red', strokeWidth: 2 }} />
+        <Line type="monotone" dataKey="10YearAvg" stroke="#82ca9d" strokeWidth={2} dot={{ stroke: '#82ca9d', strokeWidth: 2 }} />
+      </LineChart>
+    </ResponsiveContainer>
   );
 }
 
