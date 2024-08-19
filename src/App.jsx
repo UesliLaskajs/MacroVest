@@ -7,12 +7,14 @@ import Navbar from "./Layout/Navbar";
 import MarketSentiment from "./pages/market_sentiment/MarketSentiment";
 import BankReport from "./pages/BankReport/BankReport";
 import Testing from "./pages/test/Testing";
+
 function App() {
+ 
   return (
     <>
       <Router>
         <div className="flex-nav">
-          <Navbar    />
+          <Navbar />
           <Routes>
             <Route path={"/"} element={<Dashboard />} />
             <Route path="/macro-data" element={<MacroData />} />

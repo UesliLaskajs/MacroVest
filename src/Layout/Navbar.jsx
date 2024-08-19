@@ -1,7 +1,7 @@
 // MyComponent.jsx
-import  { useState,  useMemo } from 'react';
-import axios from 'axios';
-import { Link, useLocation } from 'react-router-dom';
+import { useState, useMemo } from "react";
+import axios from "axios";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -37,21 +37,23 @@ function Navbar() {
     []
   );
 
-  const [selectedPair, setSelectedPair] = useState(currencyPairs[0].name);
-
+  const [selectedPair, setSelectedPair] = useState(currencyPairs[0]);
+  console.log(selectedPair);
   const selectHandler = async (e) => {
     const newPair = e.target.value;
     setSelectedPair(newPair);
-
     try {
-      await axios.post('http://localhost:3001/update-pair', { selectedPair: newPair });
-      console.log('Selected pair sent to server');
+      await axios.post("http://localhost:3001/update-pair", {
+        selectedPair: newPair,
+      });
+      console.log("Selected pair sent to server");
     } catch (error) {
-      console.error('Error sending selected pair to server:', error);
+      console.error("Error sending selected pair to server:", error);
     }
   };
 
-  const isActiveLink = (path) => location.pathname === path ? "active-link" : "";
+  const isActiveLink = (path) =>
+    location.pathname === path ? "active-link" : "";
 
   return (
     <section className="nav-container">

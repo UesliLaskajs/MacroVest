@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import GridMacroData from "../../components/GridMacroData";
+
+
 function MacroData() {
   const [data, setData] = useState({});
-
   useEffect(() => {
     axios
       .get("http://localhost:3001/data-pair")

@@ -8,37 +8,48 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from 'recharts';
-import PropTypes from 'prop-types';
+} from "recharts";
+import PropTypes from "prop-types";
+
 
 function CurrencyLineChart({ data }) {
-  const startDate = new Date('2024-01-01');
+
+
+  const startDate = new Date("2024-01-01");
 
   const filteredYears = (startYear, endYear) => {
     const filteredData = Object.keys(data).reduce((result, date) => {
       const currentDate = new Date(date);
       const year = currentDate.getFullYear();
       if (year >= startYear && year <= endYear) {
-        const monthDay = `${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
+        const monthDay = `${
+          currentDate.getMonth() + 1
+        }-${currentDate.getDate()}`;
         if (!result[monthDay]) {
           result[monthDay] = [];
         }
-        result[monthDay].push(parseFloat(data[date]['4. close']));
+        result[monthDay].push(parseFloat(data[date]["4. close"]));
       }
       return result;
     }, {});
 
-    const averagedData = Object.keys(filteredData).reduce((result, monthDay) => {
-      const averageClose =
-        filteredData[monthDay].reduce((sum, close) => sum + close, 0) /
-        filteredData[monthDay].length;
-      const [month, day] = monthDay.split('-');
-      const formattedDate = `${new Date().getFullYear()}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
-      result.push({ date: formattedDate, close: averageClose.toFixed(4) });
-      return result;
-    }, []);
+    const averagedData = Object.keys(filteredData).reduce(
+      (result, monthDay) => {
+        const averageClose =
+          filteredData[monthDay].reduce((sum, close) => sum + close, 0) /
+          filteredData[monthDay].length;
+        const [month, day] = monthDay.split("-");
+        const formattedDate = `${new Date().getFullYear()}-${month.padStart(
+          2,
+          "0"
+        )}-${day.padStart(2, "0")}`;
+        result.push({ date: formattedDate, close: averageClose.toFixed(4) });
+        return result;
+      },
+      []
+    );
 
-    return averagedData.filter(entry => new Date(entry.date) >= startDate);
+    return averagedData.filter((entry) => new Date(entry.date) >= startDate);
   };
 
   const averagedData3Years = filteredYears(2021, 2023);
@@ -50,9 +61,11 @@ function CurrencyLineChart({ data }) {
     const date = entry.date;
     return {
       date,
-      '3YearAvg': entry.close,
-      '5YearAvg': averagedData5Years.find(e => e.date === date)?.close || null,
-      '10YearAvg': averagedData10Years.find(e => e.date === date)?.close || null,
+      "3YearAvg": entry.close,
+      "5YearAvg":
+        averagedData5Years.find((e) => e.date === date)?.close || null,
+      "10YearAvg":
+        averagedData10Years.find((e) => e.date === date)?.close || null,
     };
   });
 
@@ -60,10 +73,21 @@ function CurrencyLineChart({ data }) {
   const CustomTooltip = ({ payload, label }) => {
     if (payload && payload.length) {
       return (
-        <div className="custom-tooltip" style={{ backgroundColor: '#fff', border: '1px solid #ccc', padding: '10px', borderRadius: '5px' }}>
+        <div
+          className="custom-tooltip"
+          style={{
+            backgroundColor: "#fff",
+            border: "1px solid #ccc",
+            padding: "10px",
+            borderRadius: "5px",
+          }}
+        >
           <p className="label">{`Date: ${label}`}</p>
           {payload.map((entry, index) => (
-            <p key={index} style={{ color: entry.stroke }}>{`${entry.name}: ${entry.value}`}</p>
+            <p
+              key={index}
+              style={{ color: entry.stroke }}
+            >{`${entry.name}: ${entry.value}`}</p>
           ))}
         </div>
       );
@@ -86,10 +110,28 @@ function CurrencyLineChart({ data }) {
         <XAxis dataKey="date" tick={{ fontSize: 12 }} tickMargin={10} />
         <YAxis domain={[1.0, 1.2]} tick={{ fontSize: 12 }} tickMargin={10} />
         <Tooltip content={<CustomTooltip />} />
-        <Legend verticalAlign="top" wrapperStyle={{ paddingBottom: '10px' }} />
-        <Line type="monotone" dataKey="3YearAvg" stroke="#8884d8" strokeWidth={2} dot={{ stroke: '#8884d8', strokeWidth: 2 }} />
-        <Line type="monotone" dataKey="5YearAvg" stroke="red" strokeWidth={2} dot={{ stroke: 'red', strokeWidth: 2 }} />
-        <Line type="monotone" dataKey="10YearAvg" stroke="#82ca9d" strokeWidth={2} dot={{ stroke: '#82ca9d', strokeWidth: 2 }} />
+        <Legend verticalAlign="top" wrapperStyle={{ paddingBottom: "10px" }} />
+        <Line
+          type="monotone"
+          dataKey="3YearAvg"
+          stroke="#8884d8"
+          strokeWidth={2}
+          dot={{ stroke: "#8884d8", strokeWidth: 2 }}
+        />
+        <Line
+          type="monotone"
+          dataKey="5YearAvg"
+          stroke="red"
+          strokeWidth={2}
+          dot={{ stroke: "red", strokeWidth: 2 }}
+        />
+        <Line
+          type="monotone"
+          dataKey="10YearAvg"
+          stroke="#82ca9d"
+          strokeWidth={2}
+          dot={{ stroke: "#82ca9d", strokeWidth: 2 }}
+        />
       </LineChart>
     </ResponsiveContainer>
   );

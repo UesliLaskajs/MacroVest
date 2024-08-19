@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 
 app.post('/update-pair', async (req, res) => {
     const { selectedPair } = req.body;
+    console.log(selectedPair)
 
     const regexSplitPairs = (pairString) => {
         return pairString.split(/\s*\/\s*/);

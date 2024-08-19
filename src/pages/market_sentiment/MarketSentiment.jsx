@@ -1,8 +1,6 @@
 
-function MarketSentiment() {
-  return (
-    <div>MarketSentiment</div>
-  )
-}
-
-export default MarketSentiment
+const MarketSentiment = () => {
+  return <>
+  </>;
+};
+export default MarketSentiment;
